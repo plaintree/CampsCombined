@@ -1,0 +1,67 @@
+<% layout('layout/boilerplate') %>
+<div class="container justify-content-center align-items-center mt-5">
+	<div class="row">
+		<section class="col-md-6 offset-md-3 col-xl-4 offset-xl-4 mb-3">
+			<div class="card shadow">
+				<img
+					src="https://images.unsplash.com/photo-1573145881456-0708c72340ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+					class="card-img-top"
+					alt=""
+				/>
+				<div class="card-body">
+					<h4 class="card-title">Register</h4>
+					<form
+						action="/register"
+						method="post"
+						class="need-validation"
+						novalidate
+					>
+						<div class="mb-3">
+							<label for="email" class="form-label">Email Address</label>
+							<input
+								type="email"
+								class="form-control"
+								name="email"
+								id="email"
+								required
+							/>
+							<div class="invalid-feedback">
+								Please provide a valid email address.
+							</div>
+						</div>
+						<div class="mb-3">
+							<label for="username" class="form-label">Username</label>
+							<input
+								type="text"
+								class="form-control"
+								name="username"
+								id="username"
+								autofocus
+								required
+							/>
+							<div class="invalid-feedback">Please enter a username.</div>
+						</div>
+						<div class="mb-3">
+							<label for="password" class="form-label">Password</label>
+							<input
+								type="password"
+								class="form-control"
+								name="password"
+								id="password"
+								required
+							/>
+							<div class="invalid-feedback">
+								Password must be at least 8 characters.
+							</div>
+						</div>
+
+						<div class="d-grid gap-2 mb-3">
+							<button class="btn btn-primary">Register</button>
+							<a href="/" class="btn btn-secondary">Back</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
